@@ -10,7 +10,7 @@ public class ReverseList206 {
         }
     }
 
-        public static ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
             if(head == null){
                 return head;
             }

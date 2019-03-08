@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/AlibabaOnlieTest" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/TencentOnlineTest" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/TwoToThreeHundted" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OneToTwoHundred" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
