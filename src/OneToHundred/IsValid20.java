@@ -11,11 +11,11 @@ public class IsValid20 {
         return s.length()==0;
     }
 
-    public boolean isValid2(String s){
+    public static boolean isValid2(String s){
         Stack<Character> stack = new Stack<>();
         char[] chars = s.toCharArray();
         for(char aChar : chars){
-            if(aChar == '（' || aChar == '{' || aChar == '['){
+            if(aChar == '(' || aChar == '{' || aChar == '['){
                 stack.push(aChar);
             }else if(stack.size() == 0 || !isSym(stack.pop(), aChar)){
                 return false;
@@ -24,8 +24,13 @@ public class IsValid20 {
         return stack.size()==0;
     }
 
-    private boolean isSym(char c1, char c2) {
+    private static boolean isSym(char c1, char c2) {
         return (c1 == '(' && c2 == ')') || (c1 == '[' && c2 == ']') || (c1 == '{' && c2 == '}');
+    }
+
+    public static void main(String[] args ){
+        String s = "()";
+        System.out.println(isValid2(s));
     }
 
 
