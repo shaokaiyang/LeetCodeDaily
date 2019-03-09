@@ -12,7 +12,7 @@
 import java.util.Scanner;
 public class GreedyLittleQ {
 
-    //num 表示第一天最多吃num个巧克力一共需要的总数
+    // num 表示第一天最多吃num个巧克力一共需要的总数
     public static int sumChocolate(int day, int num){
         int total = 0;
         for(int i = 1; i < day; i++){
