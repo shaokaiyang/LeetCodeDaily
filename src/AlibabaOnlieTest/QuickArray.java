@@ -12,11 +12,13 @@ public class QuickArray {
 
     private static int jump(int[] temp){
         int len = temp.length;
-        int steps = 0;    //recode jump steps
+        int steps = 0;
+        //recode jump steps
         int start = 0;
         int end = 0;
         while(end < len - 1){
-            int max_pos = 0;//记录每次可以达到的最远的位置
+            int max_pos = 0;
+            //记录每次可以达到的最远的位置
             for(int i = start; i <=end; i++){
                 int max_position = i + temp[i];
                 if(max_pos < max_position){
