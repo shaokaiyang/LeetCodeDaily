@@ -21,8 +21,10 @@ public class SelectMoney {
         while(m != 0){
             countCurrent = m / temp;
             count += countCurrent;
-            m = m - countCurrent*temp;
-            temp = m;
+           // m = m - countCurrent*temp;
+            m %= temp;
+            //temp = m;
+            temp--;
         }
         System.out.println(count);
     }
