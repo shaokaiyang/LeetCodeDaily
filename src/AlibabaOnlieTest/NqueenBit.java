@@ -1,4 +1,4 @@
-class Nqueen {
+class NqueenBit {
 
     int count=0;
 
@@ -23,7 +23,7 @@ class Nqueen {
     }
 
     public static void main(String[] args){
-        Nqueen nqueen = new Nqueen();
+        NqueenBit nqueen = new NqueenBit();
         long start = System.currentTimeMillis();
         int num = nqueen.totalNQueens(8);
         System.out.println(num);
