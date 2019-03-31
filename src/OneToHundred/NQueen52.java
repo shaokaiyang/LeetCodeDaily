@@ -48,7 +48,10 @@ class Solution {
         }
     }
     public static void main(String[] args){
-        System.out.println(totalNQueens(4));
+        long start = System.currentTimeMillis();
+        System.out.println(totalNQueens(8));
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
     }
 
 }
