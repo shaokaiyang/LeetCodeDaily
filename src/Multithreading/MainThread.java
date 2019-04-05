@@ -1,3 +1,6 @@
+import java.util.Collection;
+import java.util.Deque;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -46,6 +49,7 @@ public class MainThread{
         t1.run();
         t2.run();
         new Thread(new Mythread2("d")).start();
+
     }
 
 }

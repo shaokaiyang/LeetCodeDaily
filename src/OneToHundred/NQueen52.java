@@ -3,8 +3,8 @@ import java.util.*;
 class Solution {
 
     static class Location{
-        int x;
-        int y;
+        int x;//列数
+        int y;//行数
         Location(int x, int y){
             this.x =x;
             this.y = y;
@@ -48,7 +48,10 @@ class Solution {
         }
     }
     public static void main(String[] args){
-        System.out.println(totalNQueens(4));
+        long start = System.currentTimeMillis();
+        System.out.println(totalNQueens(16));
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
     }
 
 }
