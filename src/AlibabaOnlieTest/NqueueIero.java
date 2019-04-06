@@ -1,6 +1,6 @@
 public class NqueueIero {
 
-    public static final int MAX_QUEUE = 16;
+    public static final int MAX_QUEUE = 8;
     //记录总的合理情况数
     public static int count = 0;
     //记录第N行摆放的皇后位置，索引代表行号，值代表列号
@@ -49,10 +49,29 @@ public class NqueueIero {
         return;
     }
 
+    public void getResult2(int k){
+        while(k>=1){
+            //在一行里面循环找
+            while(queen[k]<MAX_QUEUE){
+                queen[k]++;
+                if(check(k)){
+                    if(k==MAX_QUEUE){
+                        count++;
+                    }else{
+                        k++;
+                    }
+                }
+            }
+            //回溯
+            queen[k]=0;
+            k--;
+        }
+    }
+
     public static void main(String[] args){
         NqueueIero nqueueIero = new NqueueIero();
         long start = System.currentTimeMillis();
-        nqueueIero.getResult(16);
+        nqueueIero.getResult(MAX_QUEUE);
         System.out.println(count);
         long end = System.currentTimeMillis();
         System.out.println(end-start);
