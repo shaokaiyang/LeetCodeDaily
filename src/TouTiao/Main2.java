@@ -7,12 +7,12 @@
 
 import java.util.*;
 
-public class Main implements Runnable{
+public class Main2 implements Runnable{
 
     private final int mod = 1000000007, max = 200005;
 
     public static void main(String[] args) {
-        new Thread(null, new Main(), "thread-1", 1024*1024*10).start();
+        new Thread(null, new Main2(), "thread-1", 1024*1024*10).start();
     }
 
     @Override
