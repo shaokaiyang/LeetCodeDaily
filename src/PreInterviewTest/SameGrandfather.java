@@ -21,7 +21,7 @@ public class SameGrandfather {
 
         return left == null ? right : right == null ? left : root;
     }
-
+//在参数传递的时候就确定好p,q的大小关系，这样下面就不用计算min和max了。
     public static TreeNode sameGrandfather2(TreeNode root, TreeNode p, TreeNode q){
        int min, max;
        if(p.val < q.val){
