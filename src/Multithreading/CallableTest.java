@@ -26,11 +26,27 @@ public class CallableTest {
         }
     }
 
+    static class printTest implements Runnable{
+        public void run(){
+            System.out.println("runable test");
+        }
+    }
+
+    static class printTest1 implements Callable<String>{
+        public String call(){
+            String result = "callable test";
+            return result;
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         ExecutorService executor = Executors.newFixedThreadPool(3);
         List<Future<Long>> results = executor.invokeAll(asList(
                 new Sum(0, 10), new Sum(0, 1_000), new Sum(0, 1_000_000)
         ));
+        executor.submit(new printTest());
+        Future<String> results1 = executor.submit(new printTest1());
+        System.out.println(results1.get());
         executor.shutdown();
 
         for (Future<Long> result : results) {
