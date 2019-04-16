@@ -1,6 +1,6 @@
+
 public class AliQ1 {
     public static final int MAX = 200;
-
     public static void main(String[] args){
         int[] dp = new int[MAX];
         dp[0] = 2;
