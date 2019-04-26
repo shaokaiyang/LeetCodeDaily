@@ -10,15 +10,27 @@ public class Nqueen {
         this.que = new int[x+1];
     }
 
+    /**
+     *
+     * @param row: 当前所在的行数
+     * @param col：所有的列
+     * @param pie： 左下角位置
+     * @param na： 右下角位置，即不允许皇后在一条斜率为1或者-1的斜线上
+     */
     public static void nqueen1(int row, int col ,int pie, int na){
+        // 递归终止条件
         if(row >= NQUEEN){
             count ++;
             return;
         }
+        // 选取一行中可以防止皇后的位置
         int bits = (~(col|pie|na)) & ((1 << NQUEEN)-1);
         while(bits > 0){
+            // 在能够放置皇后的位置中选择一个位置，每次从最后的位置选取
             int p = bits & -bits;
+            // 往下一层递归
             nqueen1(row+1, (col|p), (pie|p) << 1, (na|p) >>1);
+            // 将该行可防止皇后的最后一位去掉，表示该位置已经尝试过
             bits &= bits - 1;
         }
     }

@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/PreInterviewTest" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/JD" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/RPCSample" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CSDNBlog" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
