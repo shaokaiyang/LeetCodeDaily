@@ -19,7 +19,14 @@ public class ListOperation {
     }
 
     /**
-     * 链表翻转非递归实现
+     * Author: UpToSky
+     * 题目： 206 链表反转
+     * 实现分析：额外定义三个节点，以头插法的方式进行链表建立
+     * cur： 进行实际操作的节点，这里主要是想留一个头指针；
+     * pre： 用于存储反转链表的头指针
+     * tmp: 暂存未反转部分的头指针
+     * time: O(n)
+     * space: O(1)
      * @param head：头指针
      * @return
      */
@@ -41,7 +48,13 @@ public class ListOperation {
     }
 
     /**
-     * K个节点一组进行翻转
+     * Author： UpToSky
+     * 题目： 24：链表两两反转；25：K个一组反转，这两个题目其实是一个题目，
+     * 实现了K个一组反转，任意数对的反转都可以直接使用
+     * 实现思路：递归实现，先找到前K个节点，对这K个节点利用链表反转的思想反转，
+     * 剩余的节点递归进行
+     * time：O(n)
+     * space:O(1)
      * @param head：头指针
      * @param k：需要进行翻转的组数
      * @return
@@ -68,12 +81,17 @@ public class ListOperation {
                 cur = head;
                 head = tmp ;
             }
+            head = cur;
         }
         return head;
     }
 
     /**
-     * 使用快慢指针判断链表是否有环
+     * Author: UpToSky
+     * 题目：141，判断链表是否有环
+     * 实现：使用快慢指针，快指针每次走两步，慢指针每次走一步
+     * time: O(n)
+     * space：0(1)
      * @param head：头指针
      * @return
      */
@@ -94,7 +112,11 @@ public class ListOperation {
     }
 
     /**
-     * 使用set判断是否含有环
+     * Author: UpToSky
+     * 题目：141，判断链表是否有环
+     * 实现：使用set集合进行
+     * time: O(n)
+     * space：0(1)
      * @param head：头指针
      * @return
      */
