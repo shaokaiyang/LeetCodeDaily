@@ -77,7 +77,8 @@ public class ListOperation {
             cur = reverseKList(cur, k);
             while(count -- > 0){
                 Node tmp = head.next;
-                head.next = cur; // 与后面翻转好的连接
+                // 与后面翻转好的连接
+                head.next = cur;
                 cur = head;
                 head = tmp ;
             }
