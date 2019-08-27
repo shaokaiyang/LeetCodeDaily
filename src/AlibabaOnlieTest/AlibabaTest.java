@@ -5,38 +5,40 @@ public class AlibabaTest {
     /**
      * 当然，你也可以不按照这个模板来作答，完全按照自己的想法来
      **/
+    public static double distance(double x1, double y1, double x2, double y2){
+        return Math.sqrt(((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)));
+    }
     public static String measureDistance(List<Double> xList, List<Double> yList, double x, double y) {
         double xMin = Double.MIN_VALUE;
         double xMax = Double.MAX_VALUE;
         double yMin = Double.MIN_VALUE;
         double yMax = Double.MAX_VALUE;
-        List<Double> xTmp = xList;
-       xList.sort(new Comparator<Double>() {
-           @Override
-           public int compare(Double o1, Double o2) {
-               return (int)(o1-o2);
-           }
-       });
-       System.out.println(xList);
-
         for(int i = 0; i < xList.size(); i++){
-            if(xList.get(i) < xMin){
+            if(xMin > xList.get(i)){
                 xMin = xList.get(i);
-            }else{
+            }
+            if(xMax < xList.get(i)){
                 xMax = xList.get(i);
             }
-            if(yList.get(i) < xMin){
-                xMin = yList.get(i);
-            }else{
-                xMax = yList.get(i);
+            if(yMin > yList.get(i)){
+                yMin = yList.get(i);
+            }
+            if(yMax < yList.get(i)){
+                yMax = yList.get(i);
             }
         }
         String result = "";
         if(x >= xMin && x <= xMax && y >= yMin && y <= yMax){
             result = "yes,0";
         }else{
-            int tmp = 0;
-            result = "no," + tmp;
+            double tmp = Double.MAX_VALUE;
+            for(int i = 0; i < xList.size(); i++){
+                double distance = distance(xList.get(i), yList.get(i), x, y);
+                if(tmp > distance){
+                    tmp = distance;
+                }
+            }
+            result = "no," + (int)tmp;
         }
         return result;
     }

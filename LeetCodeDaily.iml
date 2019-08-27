@@ -17,6 +17,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/RPCSample" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/CSDNBlog" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/CodingInterview" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/PinDuoDuo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/yuanfudao" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
