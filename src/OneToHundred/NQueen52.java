@@ -1,5 +1,7 @@
 
 import java.util.*;
+import java.util.LinkedList;
+
 class Solution {
 
     static class Location{
@@ -15,7 +17,8 @@ class Solution {
 
     public static int totalNQueens(int n) {
 
-        LinkedList<Location> list = new LinkedList<Location>();
+        LinkedList list;
+        list = new LinkedList<Location>();
         NQueen(list, 0 ,0, n);
         return count;
     }

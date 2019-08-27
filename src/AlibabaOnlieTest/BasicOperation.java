@@ -64,7 +64,6 @@ public class BasicOperation {
         */
 
         //队列
-        /*
         Queue<Integer> queue = new ArrayDeque<>();
         queue.offer(1);
         queue.offer(2);
@@ -72,7 +71,7 @@ public class BasicOperation {
         System.out.println(queue.peek());
         queue.poll();
         System.out.println(queue);
-        */
+
 
         //优先级队列,默认是小顶堆
         /*
@@ -111,6 +110,11 @@ public class BasicOperation {
             }
         });
         System.out.println(list2);
+
+        //String
+        String s = "hellojava";
+        String s1 = s.substring(1,2);
+        System.out.println(s1);
 
     }
 
